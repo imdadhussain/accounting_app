@@ -1,0 +1,95 @@
+{
+ "autoname": "ACC-JV.#####",
+ "creation": "2021-08-26 10:39:21.246085",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "posting_timestamp",
+  "journal_entry_table_section",
+  "journal_entry_table",
+  "summary_section",
+  "total_credit",
+  "total_debit",
+  "difference",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "Now",
+   "fieldname": "posting_timestamp",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Posting Timestamp",
+   "reqd": 1
+  },
+  {
+   "fieldname": "journal_entry_table_section",
+   "fieldtype": "Section Break",
+   "label": "Journal Entry Table"
+  },
+  {
+   "default": "Not ready",
+   "fieldname": "journal_entry_table",
+   "fieldtype": "Table",
+   "label": "Journal Entry Table",
+   "options": "Journal Entry Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "total_credit",
+   "fieldtype": "Read Only",
+   "label": "Total Credit",
+   "options": "Currency:INR"
+  },
+  {
+   "fieldname": "total_debit",
+   "fieldtype": "Read Only",
+   "label": "Total Debit",
+   "options": "Currency:INR"
+  },
+  {
+   "fieldname": "difference",
+   "fieldtype": "Read Only",
+   "label": "Difference (Dr - Cr)",
+   "options": "Currency:INR"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Journal Entry",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-08-30 19:27:53.239471",
+ "modified_by": "Administrator",
+ "module": "Accounting App",
+ "name": "Journal Entry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
